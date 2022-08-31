@@ -1,0 +1,46 @@
+<section class="hero is-white is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-half">
+
+          <h1 class="title is-1">Bus Board</h1>
+
+          <% @stops.each do |stop| %>
+
+            <div class="block">
+
+            <h4 class="title is-4">These are the upcoming <%= stop.direction() %> buses at <%= stop.name() %>:</h4>
+
+            <dl>
+              <table class="table is-striped">
+                <tr>
+                  <th>Line</th>
+                  <th>Destination</th>
+                  <th>Arriving in</th>
+                </tr>
+
+                <% stop.next_arrivals_summary(5).each do |summary| %>
+
+                  <tr>
+                    <td><%= summary[0] %></td>
+                    <td><%= summary[1] %></td>
+                    <td><%= summary[2] %> min</td>
+                  </tr>
+
+                <% end %>
+
+              </table>
+            </dl>
+
+            </div>
+
+          <% end %>
+
+          <%= link_to "Look up another postcode", root_path, class: "button is-info mt-6" %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

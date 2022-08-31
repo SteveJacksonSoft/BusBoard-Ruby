@@ -1,0 +1,35 @@
+<section class="hero is-white is-fullheight">
+  <div class="hero-body">
+
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-one-third">
+
+          <h1 class="title is-1 is-centered mt-6">Bus Board</h1>
+
+          <div class="">
+            <%= form_with url: bus_board_path, method: :get do |form| %>
+
+              <%= form.label :postcode, "Enter a postcode:", class: "label" %>
+
+                <div class="block">
+                  <%= form.text_field :postcode, placeholder: "Eg. NW5 1TL", class: "input is-info" %>
+
+                  <% flash.each do |type, msg| %>
+                    <p class="help is-danger"><%= msg %></p>
+
+                  <% end %>
+                </div>
+
+                <div class="block">
+                  <%= form.submit "Find the nearest buses", class: "button is-info" %>
+                </div>
+
+            <% end %>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
