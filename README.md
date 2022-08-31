@@ -19,4 +19,4 @@ Run the server:
     rails s
 
 You can find your app now by pointing your browser to [http://localhost:3000](http://localhost:3000).
-If everything worked you should see a page titled "Bus Board" with a form to enter a postcode.
+If everything worked you should see a page that says "Yay! You’re on Rails!"
