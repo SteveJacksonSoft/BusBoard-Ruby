@@ -3544,3 +3544,43 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 3490)
 
 
+DEPRECATION WARNING: Non-URL-safe CSRF tokens are deprecated. Use 6.1 defaults or above. (called from block (3 levels) in <class:Railtie> at /home/livzorn/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3.1/lib/action_controller/railtie.rb:80)
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from block (2 levels) in <class:Railtie> at /home/livzorn/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.3.1/lib/active_record/railtie.rb:274)
+Started GET "/" for ::1 at 2022-09-06 14:07:08 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.4ms | Allocations: 4062)
+  Rendered layout layouts/application.html.erb (Duration: 783.9ms | Allocations: 66238)
+Completed 200 OK in 790ms (Views: 785.4ms | ActiveRecord: 0.0ms | Allocations: 68481)
+
+
+Started GET "/bus_board?postcode=N194PZ&commit=Find+the+nearest+buses" for ::1 at 2022-09-06 14:07:13 +0100
+Processing by PagesController#bus_board as HTML
+  Parameters: {"postcode"=>"N194PZ", "commit"=>"Find the nearest buses"}
+Started GET "/bus_board?postcode=N194PZ&commit=Find+the+nearest+buses" for ::1 at 2022-09-06 14:07:14 +0100
+Processing by PagesController#bus_board as HTML
+  Parameters: {"postcode"=>"N194PZ", "commit"=>"Find the nearest buses"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/bus_board.html.erb within layouts/application
+  Rendered pages/bus_board.html.erb within layouts/application (Duration: 1.2ms | Allocations: 613)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2493)
+Completed 200 OK in 1977ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 21961)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering pages/bus_board.html.erb within layouts/application
+  Rendered pages/bus_board.html.erb within layouts/application (Duration: 0.7ms | Allocations: 144)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 2034)
+Completed 200 OK in 1873ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 21660)
+
+
