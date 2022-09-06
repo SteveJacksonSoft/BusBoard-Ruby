@@ -4,7 +4,7 @@ A simple app for checking the next buses near you. Made in Ruby on Rails.
 
 ## Requirements
 
-Ensure you have Ruby and Rails installed. This app was made using Ruby 3.1.2 and Rails 6.0.5
+Ensure you have Ruby and Rails installed. This app was made using Ruby 3.1.2 and Rails 7.0.3.1
 
 ### Install gems
 
