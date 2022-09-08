@@ -1,6 +1,6 @@
-require_relative 'api_clients'
-require_relative 'buses'
-require_relative 'ui'
+require_relative 'Modules/api_clients'
+require_relative 'Modules/buses'
+require_relative 'Modules/ui'
 
 def bus_board
   number_of_buses = 5
