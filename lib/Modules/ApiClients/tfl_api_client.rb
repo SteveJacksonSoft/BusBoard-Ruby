@@ -21,20 +21,19 @@ module ApiClients
       end
     end
 
-    def error_if_4xx_response(http_response)
-      raise BadRequestError "Received response #{http_response.body.to_s}" if http_response.status[0] == 4
+    def error_if_unsuccessful(http_response)
+      raise BadRequestError, "Received response #{http_response.body}" unless http_response.success?
     end
 
     def get(api_endpoint)
       request_target = TFL_API_BASE_URL + api_endpoint
       begin
         response = client.get(request_target)
-        error_if_4xx_response(response)
+        error_if_unsuccessful(response)
         response.body
       rescue BadRequestError => e
-        raise BadRequestError "Request to #{request_target} failed: " + e.message
+        raise(BadRequestError, "Request to #{request_target} failed: " + e.message)
       end
-
     end
   end
 end

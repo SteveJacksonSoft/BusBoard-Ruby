@@ -1,0 +1,44 @@
+class Object
+  def bus_board: () -> untyped
+end
+
+module ApiClients
+  class BadRequestError < RuntimeError
+  end
+
+  class TflApiClient
+    TFL_API_BASE_URL: ::String
+
+    def get_next_buses_for_stop_point_id: (String stop_point_id) -> Hash[Symbol, String]
+
+    private
+
+    def client: () -> untyped
+
+    def error_if_4xx_response: (untyped http_response) -> void
+
+    def get: (String api_endpoint) -> untyped
+  end
+end
+
+module Buses
+  class BusService
+    def initialize: (ApiClients::TflApiClient api_client) -> void
+
+    def get_times_of_next_buses_at_stop: (String stop_code, Integer number_of_buses) -> Array[string]
+  end
+end
+
+module Ui
+  class ProgramInterface
+    def run_and_get_input: () -> untyped
+
+    def output: (Array[String] data) -> untyped
+
+    private
+
+    def welcome_user: () -> void
+
+    def stop_code_from_user: () -> String
+  end
+end
