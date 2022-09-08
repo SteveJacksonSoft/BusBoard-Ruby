@@ -1,0 +1,9 @@
+<h1>Welcome to BusBoard!!! Woohoo!!!!!!</h1>
+<p>If you want to know when the next buses from a particular bus stop are, you've come to the right place!</p>
+<p>(As long as you know the arbitrary stop_code that's been assigned to it by TFL)</p>
+
+<%= form_tag('/bus_board/bus_times', method: 'get') do %>
+  <%= label_tag(:stop_code, 'Stop code') %>
+  <%= text_field_tag(:stop_code) %>
+  <%= submit_tag('Find my bus!') %>
+<% end %>

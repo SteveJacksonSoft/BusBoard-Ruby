@@ -1,0 +1,6 @@
+<% next_bus_times = @bus_times.next_arrivals_at_stop %>
+
+<h1>Here are the incoming buses at stop code <%= @stop_code %></h1>
+<% next_bus_times.each do |time| %>
+  <ol><%= time %></ol>
+<% end %>
